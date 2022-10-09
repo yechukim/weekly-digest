@@ -10,9 +10,7 @@ tags:
   - plugins
   - spf13-vim
   - vim
-title: hello
+title: goodbye
 ---
 
-## 예시입니다
-
-- 예시입니다
+# goodbye

@@ -1,9 +1,22 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
+import { PostType } from '../types'
+import { getAllPosts } from '../util/post'
 
-const Home: NextPage = () => {
+export async function getStaticProps() {
+	const allPosts = getAllPosts()
+
+	return {
+		props: {
+			allPosts,
+		},
+	}
+}
+
+const Home: NextPage = ({ allPosts }: any) => {
 	return (
 		<div className={styles.container}>
 			<Head>
@@ -22,6 +35,16 @@ const Home: NextPage = () => {
 				/>
 			</div>
 			<h1 className={styles.title}>blog 📝</h1>
+			<div className={styles.bloglists}>
+				{allPosts &&
+					allPosts.map((data: PostType) => {
+						return (
+							<Link href={`/${data.id}`} key={data.id}>
+								<div className={styles.blog}>{data.id}</div>
+							</Link>
+						)
+					})}
+			</div>
 		</div>
 	)
 }
