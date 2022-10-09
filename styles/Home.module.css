@@ -14,4 +14,21 @@
 .title {
 	text-align: center;
 	font-size: 1.2em;
+	color: #ccc;
+}
+.bloglists {
+	margin-top: 50px;
+}
+.blog {
+	width: 400px;
+	cursor: pointer;
+	margin: 10px auto;
+	padding: 12px 14px;
+	border-radius: 0.4em;
+	background-color: #222;
+	color: #ddd;
+}
+.blogWrapper {
+	margin: 0 auto;
+	width: 400px;
 }
