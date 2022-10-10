@@ -22,13 +22,28 @@
 .blog {
 	width: 400px;
 	cursor: pointer;
-	margin: 10px auto;
-	padding: 12px 14px;
-	border-radius: 0.4em;
+	margin: 20px auto;
+	padding: 16px 18px;
+	border-radius: 0.8em;
 	background-color: #222;
 	color: #ddd;
 }
 .blogWrapper {
 	margin: 0 auto;
 	width: 400px;
+}
+.mdTitle {
+	margin-bottom: 10px;
+}
+.tagWrapper {
+	display: flex;
+	justify-content: end;
+}
+.tag {
+	display: inline-block;
+	font-size: 0.8em;
+	padding: 4px 8px;
+	background-color: rgba(43, 174, 252, 0.3);
+	margin-right: 8px;
+	border-radius: 0.7em;
 }

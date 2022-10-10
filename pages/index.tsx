@@ -38,9 +38,19 @@ const Home: NextPage = ({ allPosts }: any) => {
 			<div className={styles.bloglists}>
 				{allPosts &&
 					allPosts.map((data: PostType) => {
+						console.log(data)
 						return (
 							<Link href={`/${data.id}`} key={data.id}>
-								<div className={styles.blog}>{data.id}</div>
+								<div className={styles.blog}>
+									<div className={styles.mdTitle}>{data.data.title}</div>
+									<div className={styles.tagWrapper}>
+										{data.data.tags.map((tag: string) => (
+											<span key={tag} className={styles.tag}>
+												{tag}
+											</span>
+										))}
+									</div>
+								</div>
 							</Link>
 						)
 					})}
