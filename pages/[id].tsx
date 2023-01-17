@@ -1,6 +1,5 @@
 import { DetailType, PostType } from '../types'
 import { getPost, getPostIds } from '../util/post'
-import styles from '../styles/Home.module.css'
 type PostPropType = {
 	post: PostType
 }
@@ -27,7 +26,7 @@ export async function getStaticProps({ params }: ParamType) {
 
 function Post({ post }: PostPropType) {
 	return (
-		<div className={styles.blogWrapper}>
+		<div>
 			<div dangerouslySetInnerHTML={{ __html: post.content }}></div>
 		</div>
 	)
