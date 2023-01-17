@@ -36,7 +36,6 @@ const Home: NextPage = ({ allPosts }: any) => {
 			<div>
 				{allPosts &&
 					allPosts.map((data: PostType) => {
-						console.log(data)
 						return (
 							<Link href={`/${data.id}`} key={data.id}>
 								<div>
