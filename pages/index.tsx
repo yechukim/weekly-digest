@@ -34,15 +34,26 @@ const Home: NextPage = ({ allPosts }: any) => {
 								>
 									<Link href={`/${id}`}>
 										<div>
-											<div className="text-xl  transition duration-300 line-clamp-2">
-												{singleData.title}
+											<div className="flex justify-between">
+												<div className="text-xl  transition duration-300 line-clamp-2">
+													{singleData.title}
+												</div>
+
+												<div className=" text-gray-500">{singleData.date}</div>
 											</div>
+
 											<div className="mt-4 text-lg line-clamp-3">
 												{singleData.description}
 											</div>
-											<div className="flex flex-wrap space-x-2 text-base">
+											<div className="flex flex-wrap space-x-2 text-base mt-2">
 												{singleData.tags.map((tag: string) => (
-													<span key={tag}>{tag}</span>
+													<div
+														className=" rounded-md shadow-surface-elevation-low bg-white/10 px-2 
+													"
+														key={tag}
+													>
+														{tag}
+													</div>
 												))}
 											</div>
 										</div>

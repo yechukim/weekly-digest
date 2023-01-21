@@ -12,7 +12,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 				div#__next,
 				div#__next > div {
 					height: 100%;
-					background: #220058;
+					background: #221d35;
+					color: #caa099;
 				}
 			`}</style>
 		</div>
