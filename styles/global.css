@@ -1,3 +1,27 @@
-@tailwind base;
+/* @tailwind base; */
+
+a {
+	color: #e87e42;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+	margin-bottom: 10px;
+	background-color: #fcc6bc;
+	color: #221d35;
+	padding: 4px 8px;
+	width: fit-content;
+}
+
+code {
+	background-color: #070415b3;
+	padding: 2px 4px;
+	margin: 0 4px;
+	border-radius: 4px;
+	color: #ccc;
+}
+
 @tailwind components;
 @tailwind utilities;
